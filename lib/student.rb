@@ -42,7 +42,7 @@ class Student
     LIMIT 1
     SQL
     
-    @id = DB[:conn].execute(id_sql)[0]
+    @id = DB[:conn].execute(id_sql)[0][0]
   end
   
   def self.create(name:, grade:)
